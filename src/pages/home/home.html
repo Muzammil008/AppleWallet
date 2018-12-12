@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button block  (click)="scan()">Scan Card</button>
+  <!-- <button ion-button block  (click)="scan2()">Scan2 Button</button> -->
+
+  <!-- {{result | json}} -->
+
+  <ion-list *ngIf="result != undefined">
+    <ion-item>
+      <ion-label color="primary">Card Number</ion-label>
+      <ion-input placeholder="Text Input" [(ngModel)]="result.cardNumber"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Card Holder Name</ion-label>
+      <ion-input placeholder="Text Input" [(ngModel)]="result.cardholderName"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
